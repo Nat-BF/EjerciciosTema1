@@ -1,0 +1,19 @@
+package repaso;
+
+public class Persona {
+	//Atributos- caracteristica de la clase y que la define
+	String nombre;
+	int numPersonas;
+	
+	public static void main(String[] args) {
+		Persona p = new Persona();
+		p.nombre = "Pepe";
+		System.out.println(p.nombre);
+		p.numPersonas = 3;
+		System.out.println(p.numPersonas);
+
+		
+	}
+	
+	
+}

@@ -1,0 +1,19 @@
+package repaso;
+//HERENCIA- Estudiate es una persona
+public class Estudiante extends Persona{
+
+	public Estudiante(String nombre) {
+		super(nombre); //funcion super() llama a constructor de persona. No hace falta declarar atributo
+	}
+	//Sobreescribir metodo padre-@Override
+	@Override
+	public void comer() {
+		System.out.println("Soy estudiante");
+	}
+	
+	public static void main(String[] args) {
+		Estudiante e = new Estudiante("Laura");
+		System.out.println(e.nombre);
+		e.comer();
+	}
+}

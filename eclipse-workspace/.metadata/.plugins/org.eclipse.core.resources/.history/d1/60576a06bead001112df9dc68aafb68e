@@ -1,0 +1,6 @@
+package repaso;
+
+public class Algoritmia {
+	Scanner sc = new Scanner(System.in);
+	
+}

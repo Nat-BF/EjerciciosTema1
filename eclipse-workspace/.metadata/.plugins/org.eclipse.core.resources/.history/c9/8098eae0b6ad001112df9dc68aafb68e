@@ -1,0 +1,22 @@
+package repaso;
+
+public class EmpleadoFjo extends Empleado{
+	int horas;
+
+	public EmpleadoFjo(String nombre, int horas) {
+		super(nombre);
+		this.horas = horas;
+	}
+	@Override
+	public int calcularSalario() { //sin override no sobreescribe
+		return 20*horas;
+	}
+	
+	public static void main(String[] args) {
+		EmpleadoFjo ef = new EmpleadoFjo("Alejando");
+		System.out.println(ef.nombre);
+		System.out.println(ef.numPersonas);
+		System.out.println(ef.calcularSalario());
+		
+	}
+}

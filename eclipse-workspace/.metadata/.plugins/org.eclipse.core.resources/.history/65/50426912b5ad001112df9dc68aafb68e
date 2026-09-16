@@ -1,0 +1,5 @@
+package repaso;
+//HERENCIA- Estudiate es una persona
+public class Estudiante {
+	
+}

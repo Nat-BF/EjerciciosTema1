@@ -1,0 +1,7 @@
+package repaso;
+
+public class Persona {
+	
+	String nombre;
+	
+}

@@ -1,0 +1,9 @@
+package repaso;
+//HERENCIA- Estudiate es una persona
+public class Estudiante extends Persona{
+
+	public Estudiante(String nombre) {
+		super(nombre); //funcion super() llama a constructor de persona
+	}
+	
+}

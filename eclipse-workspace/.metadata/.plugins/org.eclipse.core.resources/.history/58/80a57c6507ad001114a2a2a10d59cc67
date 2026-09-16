@@ -1,0 +1,31 @@
+package repaso;
+
+public class Variables {
+	//Variables
+	
+	//Tipos primitivos
+		//Numeros enteros
+	int tipoInt; //variable declarada. Se guarda en memoria. Se inicializa con tipoInt = 5;
+		//int: 32 bits
+	byte tipoByte; //internamente Java lo guara con 8 bits en complemento 2
+		//hay que tener cuidado con el limite de los variables
+	short tipoShort;
+		//short:16 bits
+	long tipoLong;
+		//long:64 bits
+	
+		//Decimales
+	float tipoFloat;
+	double tipoDouble;
+	
+		//caracteres
+	char tiposChar= 'a';
+	
+		//Booleano
+	boolean tipoBoolean; //true o false
+	
+	//Tipos referencia
+	String s = 'hola'; //String es una clase
+	Variables v = new Variables(); //crear un objeto partiendo de una variable craeda
+	
+}

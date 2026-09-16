@@ -1,0 +1,82 @@
+package repaso;
+
+public class Variables {
+	//Variables
+	public static void main(String[] args) {
+
+	//Tipos primitivos
+		//Numeros enteros
+	int tipoInt; //variable declarada. Se guarda en memoria. Se inicializa con tipoInt = 5;
+		//int: 32 bits
+	byte tipoByte; //internamente Java lo guara con 8 bits en complemento 2
+		//hay que tener cuidado con el limite de los variables
+	short tipoShort;
+		//short:16 bits
+	long tipoLong;
+		//long:64 bits
+	
+		//Decimales
+	float tipoFloat;
+	double tipoDouble;
+	
+		//caracteres
+	char tiposChar= 'a';
+	
+		//Booleano
+	boolean tipoBoolean; //true o false
+	
+	//Tipos referencia
+	Variables v = new Variables(); //crear un objeto partiendo de una variable craeda
+	String s2 = new String("hola"); //String es una clase
+	String s3 = "hola"; 
+		//wrapper: creada para envolver un tipo primitivo y obtener nuevas funciones
+	Integer i = Integer.MIN_VALUE;
+	
+	//ARRAY
+	int [] arrInt = new int [3]; //tipoElementos [] nombre = new tipoElementos [tamaño];
+	//int[] arrInt[0]=2; Para meter algo en un array hay que hacerlo dentro de un metodo public static main void
+	
+	//Operadores
+		//== es comparación. Devuelve un boolean
+		//!= comparación 
+		// % módulo. Resto de una división
+		// && AND. Entre booleanos
+		// || OR. Entre booleanos.
+		// ++ (postincremento y preincremento), --
+	
+	//Condicionales
+	tipoInt=15;
+	if(tipoInt > 18) {
+		System.out.println("Mayor de edad");
+	}else if (tipoInt == 18) {
+		System.out.println("18");
+	}else {
+		System.out.println("menor");
+
+	}
+	
+	switch (tipoInt) {
+	case 18: 
+		System.out.println("Mayor de edad");
+	case 16:
+		System.out.println("Mayor de edad");
+		break;
+	
+	}
+	
+	//Bucles
+	for (int j = 0; j<arrInt.length; j++) {
+		
+	}
+	
+	for (int iterator : arrInt) {
+		
+	}
+	
+	while(tipoInt> 18) {
+		tipoInt++;
+	}
+	
+	}
+}
+	

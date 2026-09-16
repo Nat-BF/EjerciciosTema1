@@ -1,0 +1,12 @@
+package repaso;
+
+public class Empleado extends Persona{
+
+	public Empleado(String nombre) {
+		super(nombre);
+	}
+	
+	public int calcularSalario() {
+		return 0;
+	}
+}

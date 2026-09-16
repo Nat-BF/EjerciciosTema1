@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\brfer\Desktop\uni\4º\1er semestre\ALED\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1441680577.index
+1865797976.index
+778069775.index
+775053591.index
+636879419.index

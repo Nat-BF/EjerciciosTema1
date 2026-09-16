@@ -1,0 +1,11 @@
+package repaso;
+
+public class EmpleadoFjo extends Empleado{
+
+	public EmpleadoFjo(String nombre) {
+		super(nombre);
+	}
+	public int calcularSalario() {
+		return 2000;
+	}
+}

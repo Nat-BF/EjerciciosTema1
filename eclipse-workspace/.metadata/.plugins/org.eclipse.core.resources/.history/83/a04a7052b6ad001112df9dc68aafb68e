@@ -1,0 +1,9 @@
+package repaso;
+
+public class EmpleadoFjo extends Empleado{
+
+	public EmpleadoFjo(String nombre) {
+		super(nombre);
+	}
+
+}

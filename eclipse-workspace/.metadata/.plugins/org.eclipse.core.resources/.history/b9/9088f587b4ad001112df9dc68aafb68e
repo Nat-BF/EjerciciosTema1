@@ -1,0 +1,27 @@
+package repaso;
+
+public class Persona {
+	//Atributos- caracteristica de la clase y que la define
+	String nombre;
+	int numPersonas;
+	
+	//CONSTRUCTOR- nomenclatura especifica
+	public Persona(String nombre) {
+		this.nombre = nombre; //this hace referncia al objeto de su propia clase
+		++numPersonas;
+	}
+	
+	public static void main(String[] args) {
+		Persona p = new Persona("a");
+		p.nombre = "Pepe";
+		System.out.println(p.nombre);
+		System.out.println("Hay " + p.numPersonas);
+
+
+		Persona p2 = new Persona("Carlos");
+		System.out.println(p2.nombre);
+		System.out.println("Hay " + p2.numPersonas);
+	}
+	//Atributos or definicion pertenecen a un objeto
+	
+}

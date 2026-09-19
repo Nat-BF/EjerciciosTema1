@@ -1,0 +1,6 @@
+ARRAY- tamaño fijo
+	A[] ARRAY= new A[Tamaño]
+
+Lista- tamaño variable. Consume mas recurrsos
+	LIST <A> LISTA = new ArrayList <A><>
+			     LinkedList

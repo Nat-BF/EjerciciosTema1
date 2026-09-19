@@ -1,0 +1,6 @@
+GIT
+-INIT-- crear repo
+-ADD
+COOMIT
+PUSH
+1-Commit 2-Pull 3-Push

@@ -28,3 +28,7 @@ public class Backtracking {
 		backtracking(new int[] {1,2,3} , 4, 0, new ArrayList<>());
 	}
 }
+//PASOS DE BACKTRACKING
+	//1- Pruebo
+	//2- Exploro
+	//3- Vuelvo

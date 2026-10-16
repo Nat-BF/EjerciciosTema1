@@ -52,12 +52,15 @@ public class Equals {
 		//List -- ArrayList
 		List<Alumno> alumnos = new ArrayList<>();
 		alumnos.add(a1);
-		System.out.println(alumnos.contains(a2)); //true- hace un equals
+		System.out.println(alumnos.contains(a2)); //true- hace un equals (misma nota y nombre)
 		
 		//Set -- HashSet
 			Set<Alumno> alumnosSet = new HashSet<>();
 			alumnosSet.add(a1);
-			System.out.println(alumnosSet.contains(a2)); //true- hace un equals
+			System.out.println(alumnosSet.contains(a2)); //false-- usa el equals definido. Si da false tienen Hash codes diferentes
+			System.out.println(a1.hashCode()); //1555009629
+			System.out.println(a2.hashCode()); //41359092
+
 		
 	}
 

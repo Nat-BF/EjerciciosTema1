@@ -1,5 +1,8 @@
 package Equals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Equals {
 
 	public static void main(String[] args) {
@@ -22,7 +25,32 @@ public class Equals {
 		System.out.println(i1.equals(i2));
 		System.out.println(i1==i2); //tipo Referencia- false
 
-
+		//REPASAR COMO SE INDICA OBJETO O DIRECCIÓN
+		Alumno a1 = new Alumno ("Ana", 9.0);
+		Alumno a2 = new Alumno ("Ana", 9.0);
+			//a1==a2 compara REFERENCIAS- da false
+			//a1.equals(a2) compara por VALOR-- HAY QUE DEFINIR LA FUNCIÓN EQUALS
+				//equals predefinido returns (this == object)
+		
+				//@Override
+				//public boolean equals (Object obj){
+					//if (this == obj) return true; 
+					//if (!(obj instanceof Alumno)) return false;
+					//return this.nombre.equals(obj.nombre) && this.nota == obj.nota; //Se asume que con la misma nota y nombre es la misma persona
+						//CON STRINGS USAR EQUALS !!!!!!
+				//} 
+					//en este caso queremos que apunte al mismo objeto (Alumno a1; a2=a1)
+					//OJO MÉTODO obj instanceof Objeto !!!!!!!!!!!
+		
+			//Alumno a3=a1;
+				//System.out.println(a3 == a1) -- true. Misma referencia.
+				//System.out.println(a3.equals(a1)) -- true. equals definido 
+		
+		
+		//List -- ArrayList
+		List<Alumno> alumnos = new ArrayList<>();
+		alumnos.add(a1);
+		System.out.println(alumnos.contains(a2)); //false
 		
 	}
 

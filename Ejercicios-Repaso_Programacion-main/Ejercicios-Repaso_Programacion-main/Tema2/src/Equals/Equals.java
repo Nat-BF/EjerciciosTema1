@@ -1,8 +1,10 @@
 package Equals;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Equals {
@@ -50,16 +52,20 @@ public class Equals {
 		
 		
 		//List -- ArrayList
-		List<Alumno> alumnos = new ArrayList<>();
-		alumnos.add(a1);
-		System.out.println(alumnos.contains(a2)); //true- hace un equals (misma nota y nombre)
+			List<Alumno> alumnos = new ArrayList<>();
+			alumnos.add(a1);
+			System.out.println(alumnos.contains(a2)); //true- hace un equals (misma nota y nombre)
 		
 		//Set -- HashSet
 			Set<Alumno> alumnosSet = new HashSet<>();
 			alumnosSet.add(a1);
 			System.out.println(alumnosSet.contains(a2)); //false-- usa el equals definido. Si da false tienen Hash codes diferentes
-			System.out.println(a1.hashCode()); //1555009629
-			System.out.println(a2.hashCode()); //41359092
+				//contains tiene complejidad O(n)
+			System.out.println(a1.hashCode()); //1555009629 --tras modificar hashCode-- 1078016141
+			System.out.println(a2.hashCode()); //41359092--tras modificar hashCode-- 1078016141. contains ya da true
+			
+		//Map: Key-Value
+			Map<String, Double> notas = new HashMap<>(); //usar los wrappers
 
 		
 	}

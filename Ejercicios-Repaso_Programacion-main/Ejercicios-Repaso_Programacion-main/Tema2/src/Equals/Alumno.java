@@ -2,6 +2,7 @@ package Equals;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Alumno implements Comparable<Alumno>{ //Comparable: objeto puede ser comparado, 
 	String nombre;
@@ -14,10 +15,16 @@ public class Alumno implements Comparable<Alumno>{ //Comparable: objeto puede se
 	
 	@Override //Sobreescribe metodo toString
 		public String toString() {
-
 			return this.nombre;
 		}
 	
+	//PARA USAR @Override DEBE TENER MISMOS MODIFICADORES, PARAMETROS, ETC
+	public boolean equals (Alumno al){
+		if (this == al) return true; 
+		if (!(al instanceof Alumno)) return false;
+		return this.nombre.equals(al.nombre) && this.nota == al.nota; //Se asume que con la misma nota y nombre es la misma persona
+			//CON STRINGS USAR EQUALS !!!!!!
+	} 
 	/*public static int[] ordenar(int[] arr) {
 		for (int pasada = 0; pasada < arr.length; pasada++) {
 			System.out.println("Pasada nº: "+ (pasada+1));
@@ -70,6 +77,11 @@ public class Alumno implements Comparable<Alumno>{ //Comparable: objeto puede se
 			return this.nombre.compareTo(o.nombre); //si empatan por nota, ordenar por nombre
 		}
 		//return Double.compare(this.nota, o.nota);// --COMPARAR NOTAS
+	}
+	
+	
+	public int hashCode() {
+		return Objects.hash(nombre, nota); //hash analogo para el que tenga el mismo nombre y nota
 	}
 	
 	public static void main(String[] args) {

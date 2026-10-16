@@ -1,7 +1,9 @@
 package Equals;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Equals {
 
@@ -50,7 +52,12 @@ public class Equals {
 		//List -- ArrayList
 		List<Alumno> alumnos = new ArrayList<>();
 		alumnos.add(a1);
-		System.out.println(alumnos.contains(a2)); //false
+		System.out.println(alumnos.contains(a2)); //true- hace un equals
+		
+		//Set -- HashSet
+			Set<Alumno> alumnosSet = new HashSet<>();
+			alumnosSet.add(a1);
+			System.out.println(alumnosSet.contains(a2)); //true- hace un equals
 		
 	}
 

@@ -18,7 +18,7 @@ public class LinkedListQueue {
 			System.out.println(cola.peek()); //indica el primer elemento
 			System.out.println(cola);//[Ana, Carlos, Lucía]
 			System.out.println(cola.poll()); //Saca a ANA- LA PRIMERA EN LA COLA
-			System.out.println(cola);//[Carlos, Lucía]
+			System.out.println(cola);//[Carlos, Lucía] 
 
 
 			

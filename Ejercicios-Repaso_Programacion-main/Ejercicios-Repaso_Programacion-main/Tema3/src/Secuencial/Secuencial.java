@@ -14,7 +14,7 @@ public class Secuencial {
 	}
 	public static void main(String[] args) {
 		tareaA();
-		tareaB();
+		tareaB(); //hasta que no termina A no empieza B
 		
 	}
 

@@ -1,10 +1,21 @@
 package Secuencial;
 
 public class Secuencial {
-
+	
+	public static void tareaA() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println("A: "+i);
+		}
+	}
+	public static void tareaB() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println("B: "+i);
+		}
+	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		tareaA();
+		tareaB();
+		
 	}
 
 }

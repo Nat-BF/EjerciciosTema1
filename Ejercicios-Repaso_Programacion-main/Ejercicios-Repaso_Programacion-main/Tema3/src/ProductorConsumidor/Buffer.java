@@ -4,22 +4,34 @@ public class Buffer { //solo guarda una variable
 	private int dato = -1;
 	private boolean lleno = false;
 	
-	public synchronized boolean guardar(int dato) {
-		if(lleno) {
-			this.dato = dato;
-			this.lleno = true;
-			System.out.println("Dato guardado: " + dato);
-			return true;
+	//Hebra productora
+	public synchronized void guardar(int dato) {
+		while(lleno){ //si está lleno no puede guardar-- hacer que pare
+			try { 
+				wait(); //para hasta que le pidan despertar--LIBERA EL CERROJO
+			} catch (InterruptedException e) {
+				return;
+			}		
 		}
-		return false;
+		this.dato = dato;
+		this.lleno = true;
+		System.out.println("Guardado: " + dato);
+		notifyAll(); //despertar a una hebra pero no se cual. No implica dar el cerrojo, pero deja que pueda luchar por recuperarla
 	}
 	
+	//Hebra consumidora
 	public synchronized int sacar() {
-		if(lleno) {
-			this.lleno = false;
-			System.out.println("Dato sacado: " + dato);
-			return dato;
+		while(!lleno) { //si no está lleno (no hay nada que sacar)-- no actua
+			try {
+				wait(); //LIBERA EL CERROJO
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+				return -1;//valor invalido
+			}	
 		}
-		return -1;
+		this.lleno = false;
+		System.out.println("Sacado: " + dato);
+		notify(); //despertar a la otra hebra
+		return dato;
 	}
 }
